@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor's Dashboard</title>
+</head>
+<body>
+    <h1>Patients List</h1>
+    <ul>
+        {% for patient in patients %}
+        <li><a href="/patient/{{ patient.id }}">{{ patient.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

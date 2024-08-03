@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Details</title>
+</head>
+<body>
+    <h1>{{ patient.name }}</h1>
+    <p>Age: {{ patient.age }}</p>
+    <p>Gender: {{ patient.gender }}</p>
+    <p>Contact: {{ patient.contact }}</p>
+    <p>Address: {{ patient.address }}</p>
+
+    <h2>Visit History</h2>
+    <ul>
+        {% for visit in visits %}
+        <li>{{ visit.visit_date }} - Token: {{ visit.token }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
